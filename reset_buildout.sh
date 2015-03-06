@@ -2,7 +2,7 @@
 
 LASTCFG=''
 
-if [ -s ".mr.developer.cfg"]; then
+if [ -s ".mr.developer.cfg" ]; then
     LASTCFG=`sed -n "/\[buildout\]/ {N; /\.*args\ =/ N; n; p;}" .mr.developer.cfg| sed -e 's/^[ \t]*//'| sed "s/'//g"`
 fi
 
